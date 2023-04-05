@@ -77,8 +77,7 @@ plt.title("Profit Prediction")
 # Text(0.5, 1.0, 'Profit Prediction')
 
 def predict (x,theta):
-# 11 11 11
-# Takes in numpy array of x and theta and return the predicted value of y based on theta
+
   predictions= np.dot (theta.transpose (),x)
   return predictions[0]  
   
