@@ -74,17 +74,11 @@ plt.yticks(np.arange(-5,30,step=5))
 plt.xlabel("Population of City (10,000s)") 
 plt.ylabel("Profit ($10,000") 
 plt.title("Profit Prediction")
-# Text(0.5, 1.0, 'Profit Prediction')
-
 def predict (x,theta):
-# 11 11 11
-# Takes in numpy array of x and theta and return the predicted value of y based on theta
   predictions= np.dot (theta.transpose (),x)
   return predictions[0]
-  
-predict1=predict(np.array([1,3.5]),theta)*10000
+  predict1=predict(np.array([1,3.5]),theta)*10000
 print("For population = 35,000, we predict a profit of $"+str(round(predict1,0)))
-
 predict2=predict(np.array ([1,7]), theta)*10000
 print("For population = 70,000, we predict a profit of $"+str(round(predict2,0)))
 
