@@ -80,7 +80,7 @@ def predict (x,theta):
 # 11 11 11
 # Takes in numpy array of x and theta and return the predicted value of y based on theta
   predictions= np.dot (theta.transpose (),x)
-  return predictions[0]
+  return predictions[0]  
   
 predict1=predict(np.array([1,3.5]),theta)*10000
 print("For population = 35,000, we predict a profit of $"+str(round(predict1,0)))
