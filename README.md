@@ -22,11 +22,17 @@ Developed by:Manjupriya P
 RegisterNumber: 212220220024 
 */
 ```
+/*
+Program to implement the linear regression using gradient descent.
+Developed by: Akshith Jobirin S
+RegisterNumber: 212220040007
+*/
+
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-data = pd.read_csv("/content/ex1.csv")
+data = pd.read_csv("content/ex1.csv")
 data
 
 #compute cost value
@@ -72,20 +78,22 @@ plt.plot(x_value,y_value, color="r")
 plt.xticks(np.arange (5,30,step=5)) 
 plt.yticks(np.arange(-5,30,step=5)) 
 plt.xlabel("Population of City (10,000s)") 
-plt.ylabel("Profit ($10,000") 
+plt.ylabel("Profit ($10,000)") 
 plt.title("Profit Prediction")
 # Text(0.5, 1.0, 'Profit Prediction')
 
 def predict (x,theta):
-
+# 11 11 11
+# Takes in numpy array of x and theta and return the predicted value of y based on theta
   predictions= np.dot (theta.transpose (),x)
-  return predictions[0]  
+  return predictions[0]
   
 predict1=predict(np.array([1,3.5]),theta)*10000
 print("For population = 35,000, we predict a profit of $"+str(round(predict1,0)))
 
 predict2=predict(np.array ([1,7]), theta)*10000
 print("For population = 70,000, we predict a profit of $"+str(round(predict2,0)))
+
 
 ## Output:
 ![image](https://user-images.githubusercontent.com/113583090/230087704-419fb65a-449a-4e8d-90ad-6644236a97bf.png)
